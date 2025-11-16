@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Julee&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo {
+  font-family: 'Julee', cursive;
+}
 
 @layer base {
   :root {
