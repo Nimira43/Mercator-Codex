@@ -15,8 +15,8 @@ export default function ModeToggler() {
           variant='outline'
           size='icon'
         >
-          <GoSun className='h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90' />
-          <GoMoon className='absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0' />
+          <GoSun className='light-icon' />
+          <GoMoon className='dark-icon' />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
