@@ -1,7 +1,9 @@
+import ModeToggler from '@/components/nav/mode-toggler'
+
 export default function HomePage() {
   return (
     <div className='centre h-screen'>
-      <h1>Mercator Codex</h1>
+      <ModeToggler />
     </div>
   )
 }
