@@ -73,7 +73,7 @@
     font-family: 'Julee', cursive;
   }
 
-  .transitioning {
+  .smooth-hover {
     transition: all 0.5s ease-in-out;
   }
   
