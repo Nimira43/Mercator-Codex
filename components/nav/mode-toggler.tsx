@@ -13,6 +13,8 @@ export default function ModeToggler() {
     setMounted(true)
   }, [])
 
+  if (!mounted) return null
+
   return (
     <Button
       variant='link'
