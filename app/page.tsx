@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
-
 export default function HomePage() {
   return (
-    <div className='flex '>
-      
+    <div className='centre h-screen'>
+      <h1>Mercator Codex</h1>
     </div>
   )
 }
