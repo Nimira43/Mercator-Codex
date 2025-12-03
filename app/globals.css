@@ -4,14 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.logo {
-  font-family: 'Julee', cursive;
-}
-
-.transitioning {
-  transition: all 0.5s ease-in-out;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -75,3 +67,30 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .logo {
+    font-family: 'Julee', cursive;
+  }
+
+  .transitioning {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .centre {
+    @apply flex justify-center items-center;
+  }
+
+  .just-between {
+    @apply flex justify-between items-center;
+  }
+
+  .centre-items {
+    @apply flex items-center;
+  }
+
+  .centre-justify {
+    @apply flex justify-center;
+  }
+}
+
