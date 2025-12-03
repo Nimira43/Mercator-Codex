@@ -3,8 +3,10 @@
 import { useTheme } from 'next-themes'
 import { GoSun, GoMoon } from 'react-icons/go'
 import { Button } from '../ui/button'
+import { useState } from 'react'
 
 export default function ModeToggler() {
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
   return (
