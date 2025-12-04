@@ -6,7 +6,6 @@ import Link from 'next/link'
 export default function TopNav() {
   return (
     <Menubar>
-      
       <div className='flex-none'>
         <MenubarMenu>
           <Link
