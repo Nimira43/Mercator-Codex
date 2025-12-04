@@ -1,5 +1,7 @@
+import { GiAbstract059 } from 'react-icons/gi'
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarTrigger } from '../ui/menubar'
 import ModeToggler from './mode-toggler'
+import Link from 'next/link'
 
 export default function TopNav() {
   return (
@@ -7,7 +9,14 @@ export default function TopNav() {
       
       <div className='flex-none'>
         <MenubarMenu>
-          Logo
+          <Link
+            href='/'
+            className='centre gap-1 cursor-pointer'
+          >
+            <GiAbstract059 className='text-main text-2xl' />
+            <span className='logo text-2xl text-main-dark dark:text-main-light'>Mercator Codex</span>
+          </Link>
+          
         </MenubarMenu>
       </div>
       
