@@ -1,19 +1,9 @@
-import ModeToggler from '@/components/nav/mode-toggler'
+import TopNav from '@/components/nav/top-nav'
 
 export default function HomePage() {
   return (
-    <div className='centre h-screen'>
-      <ModeToggler />
+    <div>
+      <TopNav />
     </div>
   )
 }
-
-
-{/* <h1 className='text-3xl font-medium p-6 bg-main-dark text-main-light border-b-4 border-main logo'>
-  Mercator Codex
-</h1> */}
-
-{/* <Button variant='mainBtn' className='m-2 transitioning'>Login</Button>
-<Button variant='mainDarkBtn' className='m-2 transitioning'>Register</Button>
-<Button variant='mainLightBtn' className='m-2 transitioning'>Submit</Button>
-<Button variant='outline' className='m-2 transitioning'>Cancel</Button> */}
