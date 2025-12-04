@@ -2,6 +2,7 @@ import { GiAbstract059 } from 'react-icons/gi'
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarTrigger } from '../ui/menubar'
 import ModeToggler from './mode-toggler'
 import Link from 'next/link'
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 export default function TopNav() {
   return (
