@@ -4,14 +4,17 @@ import ModeToggler from './mode-toggler'
 export default function TopNav() {
   return (
     <Menubar>
+      
       <div className='flex-none'>
         <MenubarMenu>
           Logo
         </MenubarMenu>
       </div>
+      
       <div className='centre-items flex-grow justify-end gap-1'>
+        
         <MenubarMenu>
-          <MenubarTrigger className='text-base font-medium'>
+          <MenubarTrigger className='text-base font-normal'>
             Dashboard
           </MenubarTrigger>
           <MenubarContent>
@@ -20,6 +23,11 @@ export default function TopNav() {
             <MenubarItem>Menu Item 2</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
+
+        <MenubarMenu>
+          <ModeToggler />
+        </MenubarMenu>
+
       </div>
     </Menubar>
     
