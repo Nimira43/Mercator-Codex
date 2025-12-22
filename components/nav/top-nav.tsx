@@ -3,10 +3,11 @@ import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, Me
 import ModeToggler from './mode-toggler'
 import Link from 'next/link'
 import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { Button } from '../ui/button'
 
 export default function TopNav() {
   return (
-    <Menubar>
+    <Menubar className='py-6 px-4'>
       <div className='flex-none'>
         <MenubarMenu>
           <Link
@@ -33,6 +34,17 @@ export default function TopNav() {
           </MenubarContent>
         </MenubarMenu>
 
+        <SignedOut>
+          <SignInButton>
+            <Button variant='mainBtn' size='sm'>
+              Login
+            </Button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        
         <MenubarMenu>
           <ModeToggler />
         </MenubarMenu>
