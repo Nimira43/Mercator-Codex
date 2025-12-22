@@ -25,13 +25,10 @@ export default function TopNav() {
         
         <MenubarMenu>
           <MenubarTrigger className='text-base font-normal'>
-            Dashboard
+            <Link href='/dashboard'>
+              Dashboard
+            </Link>
           </MenubarTrigger>
-          <MenubarContent>
-            <MenubarItem>Menu Item 1</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>Menu Item 2</MenubarItem>
-          </MenubarContent>
         </MenubarMenu>
 
         <SignedOut>
