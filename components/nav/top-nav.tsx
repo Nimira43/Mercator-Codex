@@ -1,5 +1,5 @@
 import { GiAbstract059 } from 'react-icons/gi'
-import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarTrigger } from '../ui/menubar'
+import { Menubar, MenubarMenu, MenubarTrigger } from '../ui/menubar'
 import ModeToggler from './mode-toggler'
 import Link from 'next/link'
 import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
@@ -22,7 +22,13 @@ export default function TopNav() {
       </div>
       
       <div className='centre-items flex-grow justify-end gap-1'>
-        
+        <MenubarMenu>
+          <MenubarTrigger className='text-base font-normal'>
+            <Link href='/business/add'>
+              Add Business              
+            </Link>
+          </MenubarTrigger>
+        </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger className='text-base font-normal'>
             <Link href='/dashboard'>
