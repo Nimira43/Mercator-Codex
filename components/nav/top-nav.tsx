@@ -3,9 +3,14 @@ import { Menubar, MenubarMenu, MenubarTrigger } from '../ui/menubar'
 import ModeToggler from './mode-toggler'
 import Link from 'next/link'
 import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
-import { Button } from '../ui/button'
+import { RiDashboardHorizontalLine } from 'react-icons/ri'
+import { MdLogin, MdLogout } from 'react-icons/md'
+import { FiPlus } from 'react-icons/fi'
+import { currentUser } from '@clerk/nextjs/server'
 
-export default function TopNav() {
+export default async function TopNav() {
+  const user = await currentUser()
+  
   return (
     <Menubar className='py-6 px-4'>
       <div className='flex-none'>
@@ -17,7 +22,6 @@ export default function TopNav() {
             <GiAbstract059 className='text-main text-2xl' />
             <span className='logo text-2xl text-main-dark dark:text-main-light'>Mercator Codex</span>
           </Link>
-          
         </MenubarMenu>
       </div>
       
@@ -25,24 +29,41 @@ export default function TopNav() {
         <MenubarMenu>
           <MenubarTrigger className='text-base font-normal'>
             <Link href='/business/add'>
-              Add Business              
-            </Link>
-          </MenubarTrigger>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger className='text-base font-normal'>
-            <Link href='/dashboard'>
-              Dashboard
+              <span className='centre-items'>
+                <FiPlus
+                  size={16}
+                  className='mr-2'
+                />
+                <span>Add Business</span>  
+              </span>              
             </Link>
           </MenubarTrigger>
         </MenubarMenu>
 
+        {user && (
+          <MenubarMenu>
+            <MenubarTrigger className='text-base font-normal'>
+              <Link href='/dashboard'>
+                <span className='centre-items'>
+                  <RiDashboardHorizontalLine
+                    size={16}
+                    className='mr-2'
+                  />
+                  <span>Dashboard</span>  
+                </span>          
+              </Link>
+            </MenubarTrigger>
+          </MenubarMenu>
+        )}
+
         <SignedOut>
-          <SignInButton>
-            <Button variant='mainBtn' size='sm'>
-              Login
-            </Button>
-          </SignInButton>
+          <span className='centre-items'>
+            <MdLogin 
+              size={16}
+              className='mr-2'
+            />
+            <SignInButton />
+          </span>          
         </SignedOut>
         <SignedIn>
           <UserButton />
