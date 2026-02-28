@@ -4,6 +4,7 @@ import '../assets/globals.css'
 import { ThemeProvider } from '@/context/theme-provider'
 import TopNav from '@/components/nav/top-nav'
 import { ClerkProvider } from '@clerk/nextjs'
+import { BusinessProvider } from '@/context/business'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -30,8 +31,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <TopNav />
-            {children}
+            <BusinessProvider>
+              <TopNav />
+              {children}
+            </BusinessProvider>
           </ThemeProvider>
         </body>
       </html>
