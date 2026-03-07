@@ -2,6 +2,66 @@
 
 import { useBusiness } from '@/context/business'
 
+interface InputField {
+  name: string
+  type: string
+  label: string
+  required?: boolean
+  accept?: string
+}
+
+const inputFields: InputField[] = [
+  {
+    name: 'name',
+    label: 'Business Name',
+    type: 'text',
+    required: true,
+  },
+  {
+    name: 'category',
+    label: 'Category',
+    type: 'text',
+    required: true,
+  },
+  {
+    name: 'address',
+    label: 'Address',
+    type: 'text',
+    required: true,
+  },
+  {
+    name: 'phone',
+    label: 'Phone',
+    type: 'tel',
+  },
+  {
+    name: 'email',
+    label: 'Email',
+    type: 'email',
+  },
+  {
+    name: 'website',
+    label: 'Website',
+    type: 'url',
+  },
+  {
+    name: 'hours',
+    label: 'Opening Hours',
+    type: 'text',
+  },
+  {
+    name: 'businessNumber',
+    label: 'Business Number',
+    type: 'number',
+  },
+  {
+    name: 'logo',
+    label: 'logo',
+    type: 'file',
+    accept: 'image/*'
+  },
+]
+
 export default function AddBusinessPage() {
   const { business} = useBusiness()
 
